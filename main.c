@@ -5,6 +5,8 @@ int main() {
     ex2Main();
     ex3Main();
     ex4Main();
+    ex5Main();
+    ex1advMain();
     printf("Hello, World!\n");
     printf("Hello! This is message 1.\n");
     printf("Welcome! This is message 2.\n");

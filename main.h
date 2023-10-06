@@ -7,3 +7,6 @@ void ex1Main();
 void ex2Main();
 void ex3Main();
 void ex4Main();
+void ex5Main();
+void ex1advMain();
+
