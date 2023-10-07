@@ -2,9 +2,12 @@
 //Example
 //****
 //****
-
 #include <stdio.h>
 #include "../main.h"
+#include <stdlib.h>
+#include <ctype.h>
+
+#define POSITIVE_INT_MSG "Only positive integers are accepted, please try again\n"
 
 void ex3Main() {
 
@@ -14,7 +17,9 @@ void ex3Main() {
     while (1) {
         printf("Enter width: ");
         if (scanf("%d", &width) != 1) {
-            printf("Invalid input, try again\n");
+            printf(POSITIVE_INT_MSG);
+            scanf("%*[^\n]"); // clear input buffer
+            scanf("%*c");
             continue;
         }
 
@@ -22,14 +27,16 @@ void ex3Main() {
             break;
         }
 
-        printf("Value should be positive, try again\n");
+        printf(POSITIVE_INT_MSG);
     }
 
     // Get height
     while (1) {
         printf("Enter height: ");
         if (scanf("%d", &height) != 1) {
-            printf("Invalid input, try again\n");
+            printf(POSITIVE_INT_MSG);
+            scanf("%*[^\n]"); // clear input buffer
+            scanf("%*c");
             continue;
         }
 
@@ -37,9 +44,12 @@ void ex3Main() {
             break;
         }
 
-        printf("Value should be positive, try again\n");
+        printf(POSITIVE_INT_MSG);
     }
-    printf("\n"); // Print blank row
+
+    printf("\n");
+
+    // Print blank row
     for (int i = 0; i < height; i++) {
 
         printf("*"); // Print first asterisk

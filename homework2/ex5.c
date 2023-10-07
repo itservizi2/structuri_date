@@ -29,7 +29,7 @@ void ex5Main() {
         printf("Product: %.2f\n", product);
         printf("Quotient: %.2f\n", quotient);
     } else {
-        printf("Error: Division by zero is not allowed.\n");
+        printf("Error: Division by zero is not allowed or the character inserted is not a number.\n");
     }
 
 

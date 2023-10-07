@@ -10,7 +10,7 @@ void ex2Main() {
     int birthYear, currentYear, age;
 
     // Get user input for birth year
-    printf("Enter my birth year: ");
+    printf("Enter the birth year: ");
     scanf("%d", &birthYear);
 
     // Get current year
@@ -20,7 +20,7 @@ void ex2Main() {
     age = currentYear - birthYear;
 
     // Print age
-    printf("My age is %d years\n", age);
+    printf("The age is %d years\n", age);
 
 
 }

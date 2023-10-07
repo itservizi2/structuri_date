@@ -7,10 +7,24 @@
 void ex1advMain() {
     int year, month, day;
 
-    // Prompt user for input
-    printf("Enter your birthday (YYYY MM DD): ");
-    scanf("%d %d %d", &year, &month, &day);
+    while(1) {
+        // Prompt user for input
+        printf("Enter your birthday (YYYY MM DD): ");
+        scanf("%d %d %d", &year, &month, &day);
 
+        // Validate month
+        if (month <= 0 || month > 12) {
+            printf("Error: The year can have from 1 to 12 months, please check.\n");
+            continue;
+        }
+
+        // Validate day
+        if (day <= 0 || day > 31) {
+            printf("Error: A month can have from 1 to 31 days, please check.\n");
+            continue;
+        }
+        break;
+    }
     // Adjust month and year for Zeller's Congruence formula
     if (month <= 2) {
         month += 12;

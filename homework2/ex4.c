@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "../main.h"
+#include <stdlib.h>
 
 void ex4Main() {
 
@@ -12,21 +13,31 @@ void ex4Main() {
     // Get width
     printf("Please insert width of the matrix: ");
     while (1) {
-        scanf("%d", &width);
-        if (width > 0) {
+        if(scanf("%d", &width) != 1) {
+            printf("Only positive integers are accepted, please try again\n");
+            scanf("%*s"); // clear invalid input
+        }
+        else if (width <= 0) {
+            printf("Only positive integers are accepted, please try again\n");
+        }
+        else {
             break;
         }
-        printf("Invalid input, try again\n");
     }
 
     // Get height
     printf("Please insert height of the matrix: ");
     while (1) {
-        scanf("%d", &height);
-        if (height > 0) {
+        if(scanf("%d", &height) != 1) {
+            printf("Only positive integers are accepted, please try again\n");
+            scanf("%*s"); // clear invalid input
+        }
+        else if (height <= 0) {
+            printf("Only positive integers are accepted, please try again\n");
+        }
+        else {
             break;
         }
-        printf("Invalid input, try again\n");
     }
 
     printf("You want to print a matrix of asterisks with dimensions %dx%d\n", width, height);
